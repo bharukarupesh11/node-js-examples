@@ -1,0 +1,26 @@
+1. What is packag.json?
+    - It's a json file which contains your project information/metadata such as project name, version, 
+      git repository location, dependencies etc.
+
+
+    Steps to create package.json:
+    1. To create package.json file run the below command in the root directory of your project, 
+       'npm init'     OR     'npm init --yes'
+
+    Note: npm init --yes will avoid asking information of your project in command line and will create the package.json
+      file with the default available information.
+
+
+2. Installing 'underscore' node package using following command,
+    npm i underscore
+
+    What happens when we run above command?
+    - In package.json file 'dependencies' property is added 
+    - Under dependencies we can see the name of installed package i.e. 'underscore'
+    - node_modules directory is created which contains all the information about the installed package
+
+    So, whenever we do 'npm install' npm downloads the latest version of the given package from the registry
+    and it stores that inside a folder called node_modules.
+
+3. Using an 'underscore' package
+   - To use any package inside our project we need to import it using require() function
