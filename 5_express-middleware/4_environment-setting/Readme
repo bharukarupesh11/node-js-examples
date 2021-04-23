@@ -1,0 +1,43 @@
+Environment Setting:
+While working on a real time project we've various environment like development, production, testing etc..
+
+Also, there are some of the features in our application which we don't want to ship to the production and 
+want to use only in the development environment for our purpose. 
+
+So, we will enable them only if the environment is development. How to do this? - Check your code for 
+morgan package of logging HTTP requests.
+
+To set an environment externally use below command,
+  'set NODE_ENV=production'
+
+Note: We've a global variable process which gives us an access to our current environment as below,
+        'process.env.NODE_ENV'
+
+      OR,
+
+      app.get('env') method also gives us current environment as equal to above process command.
+      Note: If an environment is not set externally then 'app.get('env)' method will return 'development' as a current
+            environment.
+
+
+
+
+
+Third Party Middleware: These are the middlewares which are not maintained by the expressjs team. So, if you 
+                        require any 3rd party middleware then you can look for it on the expressjs website under the
+                        resource option.
+
+                        - Visit:  http://expressjs.com/
+                        - Click on 'Resources' menu
+                        - Click on middleware to look for all the middlewares.
+                          Note: 
+                            1. The list of express middleware is different than the 3rd party middlewares and both are present 
+                              at the same location mentioned above.
+                            2. Before you use any 3rd party middleware, you need to install it using 
+                               'npm i middleware_package_name' command
+                            3. Userful 3rd party middlewares are,
+                               - helment: To secure your application
+                               - morgan: To log HTTP requests sent by client
+                            
+
+

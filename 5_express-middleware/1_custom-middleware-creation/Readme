@@ -1,0 +1,16 @@
+What is middleware?
+- A middleware is basically a function, that takes a request object and either returns a response to a client
+or pass the control to other middleware functions.
+
+So, every request that we get on the server will go through our middleware functions.
+
+We can also create a custom middleware functions that we can put at the front of our request processing pipeline.
+With these custom middleware functions we can perform cross cutting concerns 
+    Eg. We can do logging, authentication, authorization and so on..
+
+So an express application is essentially nothing but a bunch of middleware functions.
+
+
+What does app.use(express.json()); is used for?
+- The job of this express.json() function is to read the client request. If there is a json object in the body 
+of the request it'll parse the body of the request into a json object and then it'll sets 'req.body' property.

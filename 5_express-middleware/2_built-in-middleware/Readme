@@ -1,0 +1,28 @@
+what is urlencoded?
+- urlencoded() method parses the incoming requests with urlencoded payload i.e. a request with body like
+  key=value&key=value
+
+  This is more of a traditional approach. Basically, if you've a html form with the input fields and if you 
+  post that form to the server the body of the request will look like this key and value pair.
+
+  So, this urlencoded() middleware parses the body and populate req.body with a json object.
+
+
+How to test urlencoded?
+- To test the urlencoded, you need to have a post request so that you can send a data in a key-value pair format.
+
+So, follow the below steps,
+1. Search for Postman Chrome and add it as an extension of a Chrome
+2. Open the Postman from APPs section of chrome browser
+3. Select the request type as 'POST'
+4. Type in endpoint url as 'http://localhost:3000/api/courses'
+5. Click on 'x-www-form-urlencoded' option which is a request body 
+6. Add request data in a key-value pair format such as
+        name(key) 
+        new course(value)
+9. Click on Send button
+
+
+How to test static middleware function?
+- Run your project -> Hit 'http://localhost:3000/sample.txt' url in your browser and your static resource will
+be loaded.

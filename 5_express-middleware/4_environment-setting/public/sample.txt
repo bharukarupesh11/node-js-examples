@@ -1,0 +1,1 @@
+This is a sample file to test static resource which will be sent to client(Browser).
