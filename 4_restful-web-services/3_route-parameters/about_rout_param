@@ -1,0 +1,13 @@
+About Route Parameter:
+- We use route parameters for essential or required values.
+    Eg. Find all the courses of the given year and month, 
+        localhost:3000/api/courses/2018/1
+
+About Query Parameter:
+- These are Parameter that we add in url after question mark 
+    Eg. Find all the courses of the given year and month in a sorted order, 
+        localhost:3000/api/courses/2018/1?sortBy=name
+
+- We use query string Parameter for providing additional data to our backend services.
+         or
+- We use query string parameters for anything that is optional.

@@ -1,0 +1,16 @@
+How to test this applcation for post request?
+- The most simplest way is to use Postman endpoint connector tool. 
+
+Following are the steps to do the same: 
+1. Search for Postman Chrome and add it as an extension of a Chrome
+2. Open the Postman from APPs section of chrome browser
+3. Select the request type as 'POST'
+4. Type in endpoint url as 'http://localhost:3000/api/courses'
+5. Click on 'Body' option which is a request body 
+6. Select the 'raw' option under request body
+7. Select JSON(applcation/json) as a body format
+8. Provide below request body,
+    {
+        "name": "new course"
+    }
+9. Click on Send button

@@ -1,0 +1,36 @@
+How to test this applcation for post request?
+- The most simplest way is to use Postman endpoint connector tool. 
+
+Following are the steps to do the same: 
+1. Search for Postman Chrome and add it as an extension of a Chrome
+2. Open the Postman from APPs section of chrome browser
+3. Select the request type as 'POST'
+4. Type in endpoint url as 'http://localhost:3000/api/courses'
+5. Click on 'Body' option which is a request body 
+6. Select the 'raw' option under request body
+7. Select JSON(applcation/json) as a body format
+8. Provide below request body,
+    {
+        "name": "new course"
+    }
+9. Click on Send button
+
+
+Note: 
+1. In the real life applcation we can't rely on the data sent by the end user. So, we need to check whether
+   the data is correct or not by adding an input validation as a middleware.
+
+   If the provided data is incorrect we must send a response with proper error message.
+
+2. Use the 'joi' utility package of node for the input validation instead of writing a complex logic by yourself.
+   - Install 'joi' package using 'npm i joi' command.
+
+Schema: A schema defines the shape of our object.
+        Eg.
+        - What propertis do we have in that object
+        - What is a type of each property
+        - Do we have an email?
+        - Do we have a string?
+        - What is the min and max number of characters?
+        - Do we have a number?
+        - What range should that number be in?

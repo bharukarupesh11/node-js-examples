@@ -1,0 +1,11 @@
+nodemon is a utility package of node which continuously monitors our changes to the 
+node files.
+
+The benefit of using it is, we don't need to start our server for ever small change that we do in 
+our code.
+
+Note: nodemon is not required in a production as it's a utility class for dev so there's no need of 
+      adding it in our project dependencies. Instead, we can install it globally in our local machine.
+
+- Use below command to run your project, 
+    nodemon index.js

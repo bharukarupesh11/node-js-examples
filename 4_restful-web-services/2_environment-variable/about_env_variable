@@ -1,0 +1,16 @@
+When we deploy an application to a hosting environment, the port is dynamically assigned by the 
+hosting environment. So we can't rely on a hardcoded value like '3000' to be available.
+
+So, the way to fix this is by using environment variable. So, in an hosting environment of node applications
+we've this environment variable called 'PORT'.
+
+An environment variable is a variable that is part of the environment in which process runs. It's value is set 
+outside of the application.
+
+To set the value of variable PORT in windows, use below command on a cmd prompt,
+    set PORT=5000
+
+Note: 5000 is a random port number
+
+Now, run your application with the below command, 
+    nodemon index.js
