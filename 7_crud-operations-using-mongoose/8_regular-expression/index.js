@@ -18,26 +18,6 @@ const courseSchema = new mongoose.Schema({
 });
 
 const Course = mongoose.model('Course', courseSchema); // creates a Course class(model)
-/**
-     * Below, we've compiled our schema to a model which gives us a class.
-     * 
-     * Next, we can create an object based on that class and this object maps to 
-     * a document in a mongodb database.
-     */
-    
- const course = new Course({
-    name: 'Angular', 
-    author: 'Rupesh',
-    tags: ['angular', 'frontend'],
-    isPublished: true
-});
-
-
-async function createCourse(){
-    // Saving above document to a database 
-    const result = await course.save();
-    console.log(result);
-}
 
 async function getAllCourses() {
     const courses = await Course.find(); // to get all the documents
@@ -88,11 +68,9 @@ async function getCoursesByAuthor() {
     console.log(courses);
 }
 
-
-
-//createCourse();
-// getCourses();
+// getAllCourses();
 // getCoursesByName();
-getFilteredCourses();
+// getFilteredCourses();
+getCoursesByAuthor();
 
 

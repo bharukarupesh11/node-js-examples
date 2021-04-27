@@ -19,14 +19,16 @@ const courseSchema = new mongoose.Schema({
 });
 
 const Course = mongoose.model('courses', courseSchema); // creates a Course class(model)
-/**
-     * Below, we've compiled our schema to a model which gives us a class.
-     * 
-     * Next, we can create an object based on that class and this object maps to 
-     * a document in a mongodb database.
-     */
 
-const courses = [
+
+async function createCourses(){
+  /**
+   * Below, we've compiled our schema to a model which gives us a class.
+   * 
+   * Next, we can create an object based on that class and this object maps to 
+   * a document in a mongodb database.
+   */
+  const courses = [
     {
       tags: [ 'node', 'backend' ],
       name: 'Node Js',
@@ -78,18 +80,11 @@ const courses = [
     }
   ];
 
+  const course = new Course(courses);
 
-
-const course = new Course(courses);
-
-
-async function createCourse(){
-    // Saving above document to a database 
-    // const result = await course.save();
-
-    // To save collection of objects Eg. [{obj1}, {obj2}, {obj3}]
-    const result = await Course.collection.insertMany(courses);
-    console.log(result);
+  // To save collection of objects in DB Eg. [{obj1}, {obj2}, {obj3}]
+  const result = await Course.collection.insertMany(courses);
+  console.log(result);
 }
 
 async function getAllCourses() {
@@ -153,7 +148,7 @@ async function displayResult(){
 }
 
 
-// createCourse();
+// createCourses();
 // getAllCourses();
 displayResult();
 
