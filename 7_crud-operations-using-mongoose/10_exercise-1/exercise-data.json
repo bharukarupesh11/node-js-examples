@@ -1,0 +1,65 @@
+[
+  {
+    tags: [ 'node', 'backend' ],
+    _id: 608673519d61d51068317d7a,
+    name: 'Node Js',
+    author: 'Rupesh',
+    isPublished: true,
+    date: 2021-04-26T08:01:21.362Z,
+    __v: 0
+  },
+  {
+    tags: [ 'angular', 'frontend' ],
+    _id: 60867540250c281924bc52a2,
+    name: 'Angular',
+    author: 'Rupesh',
+    isPublished: true,
+    date: 2021-04-26T08:09:36.286Z,
+    __v: 0
+  },
+  {
+    tags: [ 'java', 'backend],
+    _id: 60867540250c281924bc52a3,
+    name: 'Java',
+    author: 'Aashish',
+    isPublished: true,
+    date: 2021-04-26T08:09:36.286Z,
+    __v: 0
+  },
+  {
+    tags: [ 'react', 'frontend' ],
+    _id: 60867540250c281924bc52a4,
+    name: 'React',
+    author: 'Rupesh',
+    isPublished: true,
+    date: 2021-04-26T08:09:36.286Z,
+    __v: 0
+  },
+  {
+    tags: [ 'python', 'backend' ],
+    _id: 60867540250c281924bc52a5,
+    name: 'Python',
+    author: 'Shubh',
+    isPublished: true,
+    date: 2021-04-26T08:09:36.286Z,
+    __v: 0
+  },
+  {
+    tags: [ 'css', 'frontend' ],
+    _id: 60867540250c281924bc52a6,
+    name: 'CSS',
+    author: 'Rupesh',
+    isPublished: true,
+    date: 2021-04-26T08:09:36.286Z,
+    __v: 0
+  },
+  {
+    tags: [ 'c language', 'backend' ],
+    _id: 60867540250c281924bc52a7,
+    name: 'C Language',
+    author: 'Rupesh',
+    isPublished: true,
+    date: 2021-04-26T08:09:36.286Z,
+    __v: 0
+  }
+]

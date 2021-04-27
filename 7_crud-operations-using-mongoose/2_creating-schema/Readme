@@ -1,0 +1,24 @@
+Schema: We use schema to define the shape of documents within a collection in mongodb.
+Collection: A collection in mongodb is like a table in relational databases.
+Document: A document in mongodb is kind of similar to a row in a relational database.
+
+So, in a relational databases we've tables and rows. In mongodb we've 
+collections and documents.
+
+Each document is a container of key-value pairs. In a simple words, it's a
+json object.
+
+
+Note: In mongoose, we've the concept of schema. This's just specific to mongoose.
+This is not a part of mongodb. We use a schema in mongoose to define the shape
+of documents in a mongodb collection. So, we use that to define what are the
+properties we've in this document. 
+
+Below are the various schema types:
+1. String
+2. Number 
+3. Date
+4. Buffer: To store binary data
+5. Boolean
+6. ObjectID: To store unique identifier
+7. Array
