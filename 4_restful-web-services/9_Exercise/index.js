@@ -2,7 +2,7 @@ const Joi = require('joi');
 const express = require('express'); // returns a function
 const app = express(); // calling a function to get the object of type Express 
 
-const express = app.use(express.json());
+app.use(express.json());
 
 
 const movie_genres = [
