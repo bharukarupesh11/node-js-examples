@@ -1,0 +1,76 @@
+Async Validators: 
+Sometimes our custom validation logic may involve an asynchronous operation 
+like reading something from a database or from a remote http service. So,
+we don't have an answer straigh away. 
+
+So, in such a scenario we need an async validators.
+
+So, have a look at code to see the conversion of synchronous validator to
+asynchronous validator.
+=======================================================================
+Custom validation:
+For properties like tags which is of type String array, we can't add built
+in validation. 
+
+So, we need to add custom validation by adding a function with our business logic.
+=======================================================================
+Validation: 
+We add validation on properties or data so that correct operations can be
+performed or right data can be stored in a database. 
+
+Untill now, we've stored documents in a DB without adding any checks on it.
+Meaning that, if we had passed below model to the DB then the DB would
+have perfectly stored empty document for us.
+    const course = new Course({
+        
+    });
+
+    // Saving above document to a database 
+    const result = await course.save();
+
+But, we don't want out document to be empty. Instead we want to impose validation on 
+properties like required and all... 
+
+So have a look on code. If you still have any confusion refer to crud 
+operations examples and link them with this validation examples.
+=======================================================================
+Model: A model is nothing but a blueprint which we call a class in oops terminology.
+Using a model, we can create an objects.
+
+Benefit of using mongodb:
+Document in a mongodb can be a complex object. So, here this tags property is an array of
+type string. We don't have something like that in relational databases. In other words
+a row in a relational databases has a simple structure. If you wanna model this type of structure
+in a relational database, you need 3 tables i.e. 
+    1. courses
+    2. tags
+    3. courses_tags(3rd table): An intermediary table because of many to many relationship between courses and tags.
+
+In mongodb or nosql database in general we don't have this structure. We don't have to define this tables.
+We dont have to script them. We simply create our objects and store them in a databse.
+That's why we call them schema less. They don't have schema.
+=======================================================================
+Schema: We use schema to define the shape of documents within a collection in mongodb.
+Collection: A collection in mongodb is like a table in relational databases.
+Document: A document in mongodb is kind of similar to a row in a relational database.
+
+So, in a relational databases we've tables and rows. In mongodb we've 
+collections and documents.
+
+Each document is a container of key-value pairs. In a simple words, it's a
+json object.
+
+
+Note: In mongoose, we've the concept of schema. This's just specific to mongoose.
+This is not a part of mongodb. We use a schema in mongoose to define the shape
+of documents in a mongodb collection. So, we use that to define what are the
+properties we've in this document. 
+
+Below are the various schema types:
+1. String
+2. Number 
+3. Date
+4. Buffer: To store binary data
+5. Boolean
+6. ObjectID: To store unique identifier
+7. Array

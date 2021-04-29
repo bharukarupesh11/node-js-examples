@@ -1,0 +1,3 @@
+Exploring properties of exception that we catch in the catch block so that
+we can use the most meaningful properties to let the user know about the
+error.
