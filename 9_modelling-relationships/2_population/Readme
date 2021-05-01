@@ -1,0 +1,42 @@
+Population:
+This example demonstrates the population of data that is referenced from the other collection.
+
+Eg. Here, in our course object, we've a reference to the author object and while retriving the details of 
+each course, we would also be interested in looking at the author of that course as these 2 entities are 
+associated to each other. So, to load the data of referencing collection i.e. author in this case we use
+populate() method.
+
+Note: It is also possible to populate multiple properties. 
+    Eg. Let's imagine that each course has a category and category refernces a category document as below,
+
+        let author = {
+            name: String,
+            bio: String,
+            website: String
+        }
+
+        let category = {
+            type: String
+        }
+
+        let course = {
+            name: String,
+
+            author: {
+                type: mongoose.Schema.Types.ObjectId, // reference to the document in a author collection
+                ref: 'Author' // name of a target collection
+            },
+
+            category: {
+                type: mongoose.Schema.Types.ObjectId, // reference to the document in a category collection
+                ref: 'Category' // name of a target collection
+            }
+        }
+
+So, to populate both author and category while retriving coruse details from database we can use populate() multiple times as below,
+    const courses = await Course
+                        .find()
+                        .populate('author', '-_id name') // exclude _id property and include only 'name' property of the authors collection document
+                        .populate('category', '-_id type') // exclude _id property and include only 'type' property of categorys collection document
+                        .select('name author');
+    console.log(courses);

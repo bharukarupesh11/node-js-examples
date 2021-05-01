@@ -1,0 +1,27 @@
+Transaction in rentals router:
+In some relational databases like sql server or mysql, we've the concept of Transaction. So, transaction means a
+a group of operations should be performed as a unite. So, either all these operations will complete and change the
+state of the database or if something fails in the middle, all these operations that have been applied will be rollbacked
+and our database will go back in the inital state.
+
+In mongodb, we don't have transactions as we have in these relational databases. We've a technique called 
+2 phase commit to get over this issue. 
+    Read at: https://docs.mongodb.com/v3.6/tutorial/perform-two-phase-commits/
+
+
+We've a npm package that gives us the concept of transaction but internally it implements this transactions
+using the 2 phase commit technique.
+    npm i fawn
+
+
+Noite: The fawn package above has 3 vulnerabilities out of which 1 is high and other 2 are moderate. To know
+more about them use 'npm audit' command and it will give you an audited report. 
+    Also, read the details of each vulnerability by visiting the link in the report for every vulnerability.
+
+In our case, 'fawn' package has a dependency as below,
+     fawn > mongoose > mongodb
+So, here the vulnerability which has a high priority is for mongodb version which is 2.2.33 and as per below
+link version below 3 has issues in it. To know more, 
+    Visit: https://www.npmjs.com/advisories/1203
+
+======================================================================================================================================================
